@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,815 +40,93 @@
       filter: invert(1);
     }
 
-    h1,
-    h2,
-    h3,
-    .price {
+    h1, h2, h3, .price {
       font-family: "Space Grotesk", sans-serif;
+      letter-spacing: -0.02em;
     }
 
     .brand-logo {
-      display: block;
-      width: 164px;
-      height: 42px;
-      object-fit: cover;
-      object-position: center;
+      height: 40px;
+      width: auto;
+      object-fit: contain;
     }
 
-    .nav-link {
-      color: rgba(255, 255, 255, .88);
-      font-size: .92rem;
-      font-weight: 500;
+    .hero-section {
+      padding: 80px 0 60px;
+      background: radial-gradient(circle at 80% 20%, rgba(118, 87, 246, 0.08), transparent 45%);
     }
 
-    .nav-link:hover {
-      color: #55e8ff;
-    }
-
-    .nav-button,
-    .hero-button {
-      border: 0;
-      color: #fff;
-      background: var(--purple);
-      box-shadow: 0 10px 24px rgba(118, 87, 246, .22);
-      transition: transform .2s ease, background .2s ease;
-    }
-
-    .nav-button:hover,
-    .hero-button:hover {
-      color: #fff;
-      background: var(--purple-dark);
-      transform: translateY(-2px);
-    }
-
-    .hero {
-      position: relative;
-      padding: 104px 0 72px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 8% 8%, rgba(166, 142, 255, .17), transparent 28%),
-        radial-gradient(circle at 94% 24%, rgba(255, 170, 114, .14), transparent 25%);
-    }
-
-    .hero::before {
-      position: absolute;
-      top: 90px;
-      left: -90px;
-      width: 230px;
-      height: 230px;
-      border: 1px solid rgba(118, 87, 246, .14);
-      border-radius: 50%;
-      box-shadow: 0 0 0 22px rgba(118, 87, 246, .03), 0 0 0 44px rgba(118, 87, 246, .02);
-      content: "";
-      pointer-events: none;
-    }
-
-    .hero::after {
-      position: absolute;
-      right: -80px;
-      bottom: 130px;
-      width: 190px;
-      height: 190px;
-      border-radius: 40% 60% 55% 45%;
-      background: rgba(255, 154, 98, .1);
-      transform: rotate(28deg);
-      content: "";
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 12px;
-      border: 1px solid #e6e1ff;
-      border-radius: 999px;
-      color: var(--purple-dark);
-      background: var(--lavender);
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow span {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #8d73ff;
-      box-shadow: 0 0 0 4px rgba(141, 115, 255, .13);
-    }
-
-    h1 {
-      max-width: 760px;
-      margin: 22px auto 18px;
-      font-size: clamp(2.6rem, 6vw, 5rem);
-      font-weight: 700;
-      letter-spacing: -.075em;
-      line-height: .98;
-    }
-
-    .hero-copy {
-      max-width: 590px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .hero-proof {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 23px;
-      color: #707790;
-      font-size: .82rem;
-      font-weight: 600;
-    }
-
-    .hero-proof span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-proof span::first-letter {
-      color: #49ad82;
-    }
-
-    .hero-button {
-      padding: 13px 22px;
-      font-weight: 700;
-    }
-
-    .hero-button::after {
+    .pill-tag {
       display: inline-block;
-      width: 0;
-      height: 2px;
-      margin-left: 0;
-      background: rgba(255, 255, 255, .65);
-      vertical-align: middle;
-      content: "";
-      transition: width .2s ease, margin-left .2s ease;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: #fff3eb;
+      color: #d96b27;
+      border: 1px solid #ffe2cf;
     }
 
-    .hero-button:hover::after {
-      width: 18px;
-      margin-left: 8px;
+    .btn-purple {
+      background: var(--purple);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 12px 24px;
+      border: 1px solid var(--purple);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
     }
 
-    .hero-note {
-      color: #8a90a5;
-      font-size: .83rem;
+    .btn-purple:hover {
+      background: var(--purple-dark);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
-    .comparison-shell {
-      max-width: 940px;
-      margin: 62px auto 0;
-      padding: 15px;
-      border: 1px solid rgba(118, 87, 246, .12);
-      border-radius: 25px;
+    .btn-outline-purple {
       background: #fff;
-      box-shadow: 0 26px 70px rgba(64, 53, 124, .13);
+      color: var(--purple);
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 12px 24px;
+      border: 1px solid #dcd6fc;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
     }
 
-    .comparison-topline {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 2px 4px 13px;
-      text-align: left;
+    .btn-outline-purple:hover {
+      background: var(--lavender);
+      color: var(--purple-dark);
+      border-color: var(--purple);
     }
 
-    .comparison-topline strong {
-      color: var(--ink);
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.05rem;
-    }
-
-    .comparison-topline span {
-      color: #8a90a5;
-      font-size: .78rem;
-    }
-
-    .comparison {
+    /* Comparador Antes / Después */
+    .compare-wrapper {
       position: relative;
-      height: 515px;
+      max-width: 760px;
+      margin: 0 auto;
+      border-radius: 20px;
       overflow: hidden;
-      border-radius: 17px;
-      background: #e7e2db;
+      box-shadow: 0 20px 50px rgba(16, 21, 43, 0.12);
+      border: 1px solid var(--line);
       user-select: none;
     }
 
-    .comparison-image,
-    .comparison-after {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=88");
-      background-position: center;
-      background-size: cover;
-    }
-
-    .comparison-image {
-      filter: blur(8px) saturate(.72) brightness(.88);
-      transform: scale(1.035);
-    }
-
-    .comparison-after {
-      width: 53%;
-      border-right: 2px solid #fff;
-      filter: saturate(1.12) contrast(1.05);
-    }
-
-    .comparison-label {
-      position: absolute;
-      top: 20px;
-      z-index: 3;
-      padding: 8px 13px;
-      border: 1px solid rgba(255, 255, 255, .3);
-      border-radius: 8px;
-      color: #fff;
-      background: rgba(16, 21, 43, .48);
-      backdrop-filter: blur(8px);
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    .before-label {
-      left: 20px;
-    }
-
-    .after-label {
-      right: 20px;
-    }
-
-    .comparison-range {
-      position: absolute;
-      inset: 0;
-      z-index: 5;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      cursor: ew-resize;
-      opacity: 0;
-    }
-
-    .comparison-handle {
-      position: absolute;
-      top: 50%;
-      left: 53%;
-      z-index: 4;
-      display: grid;
-      width: 46px;
-      height: 46px;
-      place-items: center;
-      border: 4px solid #fff;
-      border-radius: 50%;
-      color: #fff;
-      background: var(--purple);
-      box-shadow: 0 4px 16px rgba(16, 21, 43, .25);
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    .comparison-handle::before,
-    .comparison-handle::after {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-top: 2px solid #fff;
-      border-left: 2px solid #fff;
-      content: "";
-    }
-
-    .comparison-handle::before {
-      left: 7px;
-      transform: rotate(-45deg);
-    }
-
-    .comparison-handle::after {
-      right: 7px;
-      transform: rotate(135deg);
-    }
-
-    .comparison-caption {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 5px 2px;
-      color: #83899e;
-      font-size: .78rem;
-    }
-
-    .section-heading {
-      margin-bottom: 44px;
-    }
-
-    .section-heading .eyebrow {
-      background: #fff7f1;
-      border-color: #ffe2d0;
-      color: #d66b37;
-    }
-
-    .section-heading .eyebrow span {
-      background: var(--orange);
-      box-shadow: 0 0 0 4px rgba(255, 154, 98, .13);
-    }
-
-    .section-heading h2 {
-      margin: 14px 0 10px;
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: -.06em;
-    }
-
-    .section-heading p {
-      margin: 0 auto;
-      color: var(--muted);
-    }
-
-    .pricing {
-      padding: 72px 0 100px;
-      background: #fff;
-    }
-
-    .pricing::before {
+    .compare-img {
       display: block;
-      width: 70px;
-      height: 4px;
-      margin: 0 auto 34px;
-      border-radius: 99px;
-      background: linear-gradient(90deg, var(--purple), var(--orange));
-      content: "";
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
     }
 
-    .price-card {
-      position: relative;
-      height: 100%;
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: #fff;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    .price-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 45px rgba(52, 45, 98, .1);
-    }
-
-    .price-card.featured {
-      border-color: var(--purple);
-      box-shadow: 0 16px 38px rgba(118, 87, 246, .14);
-    }
-
-    .price-card.free {
-      border-color: #d9d0ff;
-      background: linear-gradient(145deg, #fff 0%, #f7f5ff 100%);
-      box-shadow: 0 16px 34px rgba(118, 87, 246, .1);
-    }
-
-    .price-card.free::before {
+    .img-before-wrap {
       position: absolute;
       top: 0;
-      right: 28px;
-      left: 28px;
-      height: 4px;
-      border-radius: 0 0 10px 10px;
-      background: linear-gradient(90deg, var(--purple), #a48fff);
-      content: "";
-    }
-
-    .price-card.free:hover {
-      box-shadow: 0 22px 48px rgba(118, 87, 246, .17);
-    }
-
-    .free-badge {
-      display: inline-flex;
-      align-items: center;
-      margin: 15px 0 2px;
-      padding: 6px 10px;
-      border: 1px solid #ded7ff;
-      border-radius: 999px;
-      color: var(--purple-dark);
-      background: #fff;
-      font-size: .73rem;
-      font-weight: 700;
-    }
-
-    .popular {
-      position: absolute;
-      top: -13px;
-      right: 22px;
-      padding: 5px 11px;
-      border-radius: 999px;
-      color: #fff;
-      background: var(--purple);
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .03em;
-      text-transform: uppercase;
-    }
-
-    .plan-name {
-      color: var(--purple-dark);
-      font-size: .79rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-
-    .price {
-      margin: 13px 0 8px;
-      font-size: 2.7rem;
-      font-weight: 700;
-      letter-spacing: -.07em;
-    }
-
-    .price small {
-      color: #8d92a4;
-      font-family: "DM Sans", sans-serif;
-      font-size: .9rem;
-      font-weight: 500;
-      letter-spacing: 0;
-    }
-
-    .plan-description {
-      min-height: 48px;
-      color: var(--muted);
-      font-size: .9rem;
-      line-height: 1.5;
-    }
-
-    .plan-button {
-      width: 100%;
-      margin: 24px 0;
-      padding: 11px;
-      border: 1px solid #dcd9f2;
-      border-radius: 9px;
-      color: var(--purple-dark);
-      background: #fff;
-      font-weight: 700;
-    }
-
-    .featured .plan-button {
-      border-color: var(--purple);
-      color: #fff;
-      background: var(--purple);
-    }
-
-    .plan-button:hover {
-      background: var(--lavender);
-    }
-
-    .featured .plan-button:hover {
-      color: #fff;
-      background: var(--purple-dark);
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      color: #5f667f;
-      font-size: .87rem;
-    }
-
-    .feature-list li::before {
-      margin-right: 9px;
-      color: #56b78d;
-      content: "✓";
-      font-weight: 700;
-    }
-
-    footer {
-      padding: 25px 0;
-      color: #9196a8;
-      background: #fcfcff;
-      font-size: .8rem;
-    }
-
-    @media (max-width: 767.98px) {
-      .hero {
-        padding-top: 72px;
-      }
-
-      .hero-proof {
-        gap: 10px 16px;
-        font-size: .76rem;
-      }
-
-      .comparison-topline {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 3px;
-      }
-
-      .comparison {
-        height: 390px;
-      }
-
-      .comparison-label {
-        top: 12px;
-        padding: 6px 9px;
-        font-size: .65rem;
-      }
-
-      .before-label {
-        left: 12px;
-      }
-
-      .after-label {
-        right: 12px;
-      }
-    }
-  </style>
-</head>
-<body id="inicio">
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container py-2">
-      <a class="navbar-brand" id="brandLink" href="#inicio" aria-label="Pixel Up, inicio">
-        <img class="brand-logo" src="PIXEL UP.png" alt="Pixel Up">
-      </a>
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Abrir navegación">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNavigation">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-          <li class="nav-item"><a class="nav-link viewer-link" href="#comparador">Cómo funciona</a></li>
-          <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
-          <li class="nav-item"><a class="btn nav-button viewer-link px-3 py-2 ms-lg-2" href="#comparador">Probar gratis</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section class="hero text-center">
-      <div class="container">
-        <span class="eyebrow"><span></span> Restauración impulsada por IA</span>
-        <h1>Devuelve la vida<br>a tus <span style="color: var(--purple);">fotos.</span></h1>
-        <p class="hero-copy">Convierte imágenes borrosas y antiguas en recuerdos nítidos, llenos de color y detalle. La magia de la IA, sin registro y en segundos.</p>
-        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mt-4">
-          <a class="btn hero-button" id="uploadButton" href="#comparador">Mejorar una foto <span class="ms-1">→</span></a>
-          <input id="imageFileInput" type="file" accept="image/*" hidden>
-          <span class="hero-note">Sin tarjeta de crédito · 2 créditos gratis por foto</span>
-        </div>
-        <div class="hero-proof" aria-label="Ventajas de Pixel Up">
-          <span>✓ Sin registro</span>
-          <span>⚡ Resultados en segundos</span>
-          <span>🔒 Privacidad primero</span>
-        </div>
-
-        <div class="comparison-shell" id="comparador">
-          <div class="comparison-topline">
-            <strong>Mira la diferencia</strong>
-            <span>Arrastra el control para comparar</span>
-          </div>
-          <div class="comparison" aria-label="Comparador de imagen antes y después">
-            <div class="comparison-image"></div>
-            <div class="comparison-after" id="afterImage"></div>
-            <span class="comparison-label before-label">Antes · Borrosa</span>
-            <span class="comparison-label after-label">Después · Restaurada</span>
-            <input class="comparison-range" id="comparisonRange" type="range" min="0" max="100" value="53" aria-label="Desliza para comparar la imagen">
-            <span class="comparison-handle" id="comparisonHandle"></span>
-          </div>
-          <div class="comparison-caption">
-            <span>Desliza para comparar</span>
-            <span>Potenciado por Pixel Up</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing" id="precios">
-      <div class="container">
-        <div class="section-heading text-center">
-          <span class="eyebrow">Planes simples y transparentes</span>
-          <h2>Elige cómo quieres crear</h2>
-          <p>Empieza gratis y escala cuando lo necesites.</p>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-4">
-            <article class="price-card free">
-              <span class="plan-name">Freemium</span>
-              <div class="price">Gratis</div>
-              <span class="free-badge">✦ 2 créditos por foto</span>
-              <p class="plan-description">Mejora tus fotos gratis usando 2 créditos por foto, sin tarjeta y sin registro.</p>
-              <button class="plan-button viewer-button" type="button">Empezar gratis</button>
-              <ul class="feature-list">
-                <li>2 créditos por cada foto restaurada</li>
-                <li>Calidad estándar HD</li>
-                <li>Sin registro previo</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="price-card featured">
-              <span class="popular">Más elegido</span>
-              <span class="plan-name">Pago por imagen</span>
-              <div class="price">Q8.30 <small>/ foto</small></div>
-              <p class="plan-description">Perfecto para una mejora puntual con máxima calidad.</p>
-              <button class="plan-button" id="singlePaymentButton" type="button">Comprar una mejora</button>
-              <ul class="feature-list">
-                <li>Una restauración 4K</li>
-                <li>Sin marca de agua</li>
-                <li>Descarga instantánea</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <article class="price-card">
-              <span class="plan-name">Suscripción</span>
-              <div class="price">Q83.00 <small>/ mes</small></div>
-              <p class="plan-description">La opción ideal para creadores y grandes bibliotecas.</p>
-              <button class="plan-button" id="subscriptionButton" type="button">Elegir suscripción</button>
-              <ul class="feature-list">
-                <li>Restauraciones ilimitadas</li>
-                <li>Procesamiento prioritario</li>
-                <li>Soporte personalizado</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="modal fade" id="singlePaymentModal" tabindex="-1" aria-labelledby="singlePaymentTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content border-0 rounded-4 shadow">
-        <div class="modal-header border-0 px-4 pt-4">
-          <div>
-            <span class="plan-name">Pago por imagen</span>
-            <h2 class="modal-title fs-4 mt-2" id="singlePaymentTitle">Restaura una foto</h2>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <form id="singlePaymentForm">
-          <div class="modal-body px-4">
-            <p class="text-secondary small">Completa los datos para procesar tu restauración de Q8.30.</p>
-            <div class="mb-3">
-              <label class="form-label" for="singleName">Nombre completo</label>
-              <input class="form-control" id="singleName" type="text" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="singleEmail">Correo electrónico</label>
-              <input class="form-control" id="singleEmail" type="email" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="singleCard">Número de tarjeta</label>
-              <input class="form-control" id="singleCard" type="text" inputmode="numeric" minlength="16" maxlength="19" required>
-            </div>
-            <div class="row g-3">
-              <div class="col-6">
-                <label class="form-label" for="singleExpiry">Vencimiento</label>
-                <input class="form-control" id="singleExpiry" type="text" maxlength="5" required>
-              </div>
-              <div class="col-6">
-                <label class="form-label" for="singleCvv">CVV</label>
-                <input class="form-control" id="singleCvv" type="password" inputmode="numeric" minlength="3" maxlength="4" required>
-              </div>
-            </div>
-            <div class="alert alert-success d-none mt-4 mb-0" id="singlePaymentSuccess" role="status">Pago simulado completado. Tu foto está lista para restaurarse.</div>
-          </div>
-          <div class="modal-footer border-0 px-4 pb-4">
-            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn nav-button px-4">Pagar Q8.30</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="subscriptionModal" tabindex="-1" aria-labelledby="subscriptionTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content border-0 rounded-4 shadow">
-        <div class="modal-header border-0 px-4 pt-4">
-          <div>
-            <span class="plan-name">Suscripción mensual</span>
-            <h2 class="modal-title fs-4 mt-2" id="subscriptionTitle">Activa Pixel Up Pro</h2>
-          </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <form id="subscriptionForm">
-          <div class="modal-body px-4">
-            <p class="text-secondary small">Disfruta restauraciones ilimitadas por Q83.00 al mes.</p>
-            <div class="mb-3">
-              <label class="form-label" for="subscriptionName">Nombre completo</label>
-              <input class="form-control" id="subscriptionName" type="text" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="subscriptionEmail">Correo electrónico</label>
-              <input class="form-control" id="subscriptionEmail" type="email" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="subscriptionCard">Número de tarjeta</label>
-              <input class="form-control" id="subscriptionCard" type="text" inputmode="numeric" minlength="16" maxlength="19" required>
-            </div>
-            <div class="row g-3">
-              <div class="col-6">
-                <label class="form-label" for="subscriptionExpiry">Vencimiento</label>
-                <input class="form-control" id="subscriptionExpiry" type="text" maxlength="5" required>
-              </div>
-              <div class="col-6">
-                <label class="form-label" for="subscriptionCvv">CVV</label>
-                <input class="form-control" id="subscriptionCvv" type="password" inputmode="numeric" minlength="3" maxlength="4" required>
-              </div>
-            </div>
-            <div class="alert alert-success d-none mt-4 mb-0" id="subscriptionSuccess" role="status">Suscripción simulada activada correctamente. ¡Bienvenido a Pixel Up Pro!</div>
-          </div>
-          <div class="modal-footer border-0 px-4 pb-4">
-            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn nav-button px-4">Suscribirme por Q83.00</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="container d-flex flex-wrap justify-content-between gap-2">
-      <span>© 2025 Pixel Up</span>
-      <span>Tu historia merece verse mejor.</span>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const comparisonRange = document.getElementById("comparisonRange");
-    const afterImage = document.getElementById("afterImage");
-    const comparisonHandle = document.getElementById("comparisonHandle");
-
-    const updateComparison = () => {
-      const position = `${comparisonRange.value}%`;
-      afterImage.style.width = position;
-      comparisonHandle.style.left = position;
-    };
-
-    comparisonRange.addEventListener("input", updateComparison);
-    updateComparison();
-
-    const scrollToViewer = () => {
-      document.getElementById("comparador").scrollIntoView({ behavior: "smooth", block: "start" });
-    };
-
-    document.getElementById("brandLink").addEventListener("click", (event) => {
-      event.preventDefault();
-      document.getElementById("inicio").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-
-    document.querySelectorAll(".viewer-link, .viewer-button").forEach((element) => {
-      element.addEventListener("click", (event) => {
-        event.preventDefault();
-        scrollToViewer();
-      });
-    });
-
-    const imageFileInput = document.getElementById("imageFileInput");
-    const uploadButton = document.getElementById("uploadButton");
-    const heroNote = document.querySelector(".hero-note");
-
-    uploadButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      imageFileInput.click();
-    });
-
-    imageFileInput.addEventListener("change", () => {
-      if (imageFileInput.files.length > 0) {
-        heroNote.textContent = `Imagen seleccionada: ${imageFileInput.files[0].name}`;
-        scrollToViewer();
-      }
-    });
-
-    const openPaymentModal = (modalId, successId) => {
-      document.getElementById(successId).classList.add("d-none");
-      bootstrap.Modal.getOrCreateInstance(document.getElementById(modalId)).show();
-    };
-
-    document.getElementById("singlePaymentButton").addEventListener("click", () => {
-      openPaymentModal("singlePaymentModal", "singlePaymentSuccess");
-    });
-
-    document.getElementById("subscriptionButton").addEventListener("click", () => {
-      openPaymentModal("subscriptionModal", "subscriptionSuccess");
-    });
-
-    document.getElementById("singlePaymentForm").addEventListener("submit", (event) => {
-      event.preventDefault();
-      document.getElementById("singlePaymentSuccess").classList.remove("d-none");
-    });
-
-    document.getElementById("subscriptionForm").addEventListener("submit", (event) => {
-      event.preventDefault();
-      document.getElementById("subscriptionSuccess").classList.remove("d-none");
-    });
-  </script>
-</body>
-</html>
+      left: 0
